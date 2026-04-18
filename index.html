@@ -1,16 +1,568 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rhythm & Roux - Chef Brenda Smith</title>
-    <meta name="description" content="Chef Brenda Smith - Rhythm & Roux: The Art of Feeding the Soul">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chef Brenda Smith · Rhythm & Roux</title>
+  <meta name="description" content="Chef Brenda Smith — New Orleans-rooted culinary authority. Five decades of mastery in food, wellness, and cultural storytelling. Author, Chef, Legend." />
+  <meta property="og:title" content="Chef Brenda Smith · Rhythm & Roux" />
+  <meta property="og:description" content="Five decades of culinary mastery rooted in New Orleans. Food, wellness, and cultural legacy." />
+  <meta property="og:type" content="website" />
+
+  <!-- Preload critical fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Cormorant+SC:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link href="https://api.fontshare.com/v2/css?f[]=switzer@400,500,600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <h1>Rhythm & Roux</h1>
-    <h2>Chef Brenda Smith Showcase</h2>
-    <p>This repository contains the Chef Brenda Smith showcase site.</p>
-    <p><strong>Note:</strong> The complete source files were downloaded from the Perplexity Computer artifact. Please extract the downloaded ZIP file and replace this placeholder with the full site content.</p>
-    <p>Live preview available at: <a href="https://www.perplexity.ai/computer/a/chef-brenda-showcase-0XDZZrNOShSUq8lv2WS_Kg">Chef Brenda Showcase (Perplexity Computer)</a></p>
-</body>
+
+  <!-- ═══════════════════════════════════════════ NAVIGATION -->
+  <header class="site-header" id="site-header">
+    <nav class="nav-inner" aria-label="Main navigation">
+      <!-- Monogram SVG Logo -->
+      <a href="#" class="nav-logo" aria-label="Rhythm & Roux – Chef Brenda Smith">
+        <svg class="logo-svg" viewBox="0 0 120 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <!-- R&R monogram with elegant linework -->
+          <g class="logo-mark">
+            <!-- Abstract crown/arc motif -->
+            <path d="M8 38 C8 38 12 18 22 14 C32 10 38 16 38 24 C38 30 34 34 28 35 L38 46" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            <path d="M28 35 C34 35 38 32 40 28" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.5"/>
+            <!-- Ampersand-inspired connector -->
+            <path d="M48 46 C48 46 50 38 54 32 C58 26 60 38 56 42 C52 46 48 44 48 40 C48 36 52 32 58 30 C64 28 68 32 68 36" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            <!-- Second R -->
+            <path d="M78 38 C78 38 82 18 92 14 C102 10 108 16 108 24 C108 30 104 34 98 35 L108 46" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            <path d="M98 35 C104 35 108 32 110 28" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.5"/>
+            <!-- Gold accent dots -->
+            <circle cx="60" cy="10" r="1.5" fill="var(--accent-gold)" opacity="0.9"/>
+            <circle cx="22" cy="8" r="1" fill="var(--accent-gold)" opacity="0.6"/>
+            <circle cx="98" cy="8" r="1" fill="var(--accent-gold)" opacity="0.6"/>
+          </g>
+        </svg>
+        <span class="logo-wordmark">Rhythm & Roux</span>
+      </a>
+
+      <ul class="nav-links" role="list">
+        <li><a href="#legacy">Legacy</a></li>
+        <li><a href="#works">Works</a></li>
+        <li><a href="#philosophy">Philosophy</a></li>
+        <li><a href="#invitation">Connect</a></li>
+      </ul>
+
+      <div class="nav-controls">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"/>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
+          </svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+        <a href="#invitation" class="nav-cta">Reserve a Consultation</a>
+      </div>
+
+      <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Open navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+      <ul role="list">
+        <li><a href="#legacy">Legacy</a></li>
+        <li><a href="#works">Works</a></li>
+        <li><a href="#philosophy">Philosophy</a></li>
+        <li><a href="#invitation">Connect</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ═══════════════════════════════════════════ HERO -->
+    <section class="hero" id="hero" aria-label="Introduction">
+      <!-- Animated canvas for particles/orbs -->
+      <canvas class="hero-canvas" id="hero-canvas" aria-hidden="true"></canvas>
+
+      <!-- SVG Abstract Halo / Crown ornament -->
+      <div class="hero-ornament" aria-hidden="true">
+        <svg viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg" class="halo-svg">
+          <!-- Outer halo ring -->
+          <circle cx="300" cy="300" r="270" stroke="url(#halo-gradient)" stroke-width="0.5" opacity="0.4"/>
+          <circle cx="300" cy="300" r="240" stroke="url(#halo-gradient)" stroke-width="0.3" opacity="0.25"/>
+          <!-- Crown points -->
+          <path d="M300 30 L320 100 L350 60 L360 130 L400 80 L395 160 L440 120 L420 200" stroke="url(#crown-gradient)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+          <path d="M300 30 L280 100 L250 60 L240 130 L200 80 L205 160 L160 120 L180 200" stroke="url(#crown-gradient)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+          <!-- Radial linework -->
+          <g opacity="0.15" stroke="var(--accent-gold)" stroke-width="0.5">
+            <line x1="300" y1="30" x2="300" y2="570"/>
+            <line x1="30" y1="300" x2="570" y2="300"/>
+            <line x1="109" y1="109" x2="491" y2="491"/>
+            <line x1="491" y1="109" x2="109" y2="491"/>
+            <line x1="160" y1="60" x2="440" y2="540"/>
+            <line x1="440" y1="60" x2="160" y2="540"/>
+            <line x1="60" y1="160" x2="540" y2="440"/>
+            <line x1="540" y1="160" x2="60" y2="440"/>
+          </g>
+          <!-- Inner geometric diamond -->
+          <polygon points="300,180 380,300 300,420 220,300" stroke="url(#diamond-gradient)" stroke-width="0.8" fill="none" opacity="0.35"/>
+          <polygon points="300,210 360,300 300,390 240,300" stroke="url(#diamond-gradient)" stroke-width="0.5" fill="none" opacity="0.2"/>
+          <!-- Gold dot cluster at crown apex -->
+          <circle cx="300" cy="30" r="4" fill="var(--accent-gold)" opacity="0.9"/>
+          <circle cx="300" cy="30" r="8" fill="var(--accent-gold)" opacity="0.2"/>
+          <circle cx="300" cy="30" r="14" fill="var(--accent-gold)" opacity="0.08"/>
+
+          <defs>
+            <linearGradient id="halo-gradient" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="var(--accent-gold)" stop-opacity="0.8"/>
+              <stop offset="50%" stop-color="var(--accent-champagne)" stop-opacity="0.4"/>
+              <stop offset="100%" stop-color="var(--accent-plum)" stop-opacity="0.6"/>
+            </linearGradient>
+            <linearGradient id="crown-gradient" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="var(--accent-gold)"/>
+              <stop offset="100%" stop-color="var(--accent-champagne)" stop-opacity="0.3"/>
+            </linearGradient>
+            <linearGradient id="diamond-gradient" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="var(--accent-champagne)"/>
+              <stop offset="100%" stop-color="var(--accent-gold)" stop-opacity="0.5"/>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+
+      <!-- Hero art: Brenda-led editorial portrait -->
+      <div class="hero-portrait-frame">
+        <div class="portrait-glow"></div>
+        <figure class="hero-photo-panel fade-in">
+          <div class="hero-photo-wrap">
+            <img src="assets/brenda-portrait.jpg" alt="Portrait of Chef Brenda Smith" class="hero-photo-main hero-photo-main--contain" />
+          </div>
+          <figcaption class="hero-photo-caption">
+            <span class="hero-photo-kicker">Chef Brenda Smith</span>
+            <p>A commanding portrait at the center of a modern Creole legacy.</p>
+          </figcaption>
+        </figure>
+      </div>
+
+      <div class="hero-content">
+        <div class="hero-mobile-art fade-in">
+          <figure class="hero-mobile-photo-card">
+            <img src="assets/brenda-portrait.jpg" alt="Portrait of Chef Brenda Smith" class="hero-mobile-photo" />
+            <figcaption>
+              <span class="hero-mobile-kicker">Chef Brenda Smith</span>
+              <span class="hero-mobile-line"></span>
+            </figcaption>
+          </figure>
+        </div>
+        <p class="hero-eyebrow fade-in">New Orleans · Est. 1974</p>
+        <h1 class="hero-title fade-in">
+          <span class="hero-title-line">The Art of</span>
+          <em class="hero-title-em">Feeding</em>
+          <span class="hero-title-line">the Soul</span>
+        </h1>
+        <p class="hero-descriptor fade-in">
+          Chef Brenda Smith has spent five decades transforming kitchens into sanctuaries — 
+          where Creole memory, ancestral wisdom, and radical nourishment converge into something 
+          the world has never quite tasted before.
+        </p>
+        <div class="hero-actions fade-in">
+          <a href="#works" class="btn-primary">Explore Her Legacy</a>
+          <a href="#invitation" class="btn-ghost">Begin a Conversation</a>
+        </div>
+        <div class="hero-credentials fade-in">
+          <span>Culinary Authority</span>
+          <span class="divider" aria-hidden="true">·</span>
+          <span>Cookbook Author</span>
+          <span class="divider" aria-hidden="true">·</span>
+          <span>Wellness Advocate</span>
+          <span class="divider" aria-hidden="true">·</span>
+          <span>Cultural Storyteller</span>
+        </div>
+      </div>
+
+      <!-- Scroll indicator -->
+      <div class="scroll-indicator" aria-hidden="true">
+        <span class="scroll-line"></span>
+        <span class="scroll-label">Scroll</span>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ LEGACY STATEMENT -->
+    <section class="legacy" id="legacy" aria-labelledby="legacy-heading">
+      <div class="legacy-inner">
+        <div class="legacy-label fade-in">
+          <span class="section-label">Legacy</span>
+        </div>
+
+        <div class="legacy-grid">
+          <div class="legacy-statement fade-in">
+            <h2 id="legacy-heading" class="legacy-heading">
+              Some flavors are born.<br/>
+              <em>Hers were forged.</em>
+            </h2>
+          </div>
+
+          <div class="legacy-text fade-in">
+            <p>
+              Brenda Smith grew up in the kitchens of New Orleans' Seventh Ward, where her grandmother 
+              pressed red beans into something close to religion. She learned early that food is not 
+              merely sustenance — it is archive, communion, and resistance.
+            </p>
+            <p>
+              Over five decades, she has cooked for presidents and for communities, written the 
+              definitive works on Creole wellness cuisine, and mentored a generation of chefs who 
+              carry her philosophy forward: that to feed someone with intention is one of the most 
+              powerful acts a human being can perform.
+            </p>
+            <blockquote class="legacy-quote">
+              “The kitchen is where I learned what it means to love without conditions.”
+              <cite>— Chef Brenda Smith</cite>
+            </blockquote>
+          </div>
+        </div>
+
+        <!-- Stat row -->
+        <div class="legacy-stats fade-in" role="list" aria-label="Career highlights">
+          <div class="stat-item" role="listitem">
+            <span class="stat-number">50+</span>
+            <span class="stat-label">Years of Mastery</span>
+          </div>
+          <div class="stat-divider" aria-hidden="true"></div>
+          <div class="stat-item" role="listitem">
+            <span class="stat-number">7</span>
+            <span class="stat-label">Published Works</span>
+          </div>
+          <div class="stat-divider" aria-hidden="true"></div>
+          <div class="stat-item" role="listitem">
+            <span class="stat-number">4</span>
+            <span class="stat-label">Culinary Awards</span>
+          </div>
+          <div class="stat-divider" aria-hidden="true"></div>
+          <div class="stat-item" role="listitem">
+            <span class="stat-number">1</span>
+            <span class="stat-label">Singular Vision</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Decorative linework -->
+      <div class="legacy-ornament" aria-hidden="true">
+        <svg viewBox="0 0 400 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 100 Q100 20 200 100 Q300 180 400 100" stroke="var(--accent-gold)" stroke-width="0.6" opacity="0.3"/>
+          <path d="M0 110 Q100 30 200 110 Q300 190 400 110" stroke="var(--accent-champagne)" stroke-width="0.4" opacity="0.2"/>
+          <circle cx="200" cy="100" r="6" fill="none" stroke="var(--accent-gold)" stroke-width="0.8" opacity="0.5"/>
+          <circle cx="200" cy="100" r="2" fill="var(--accent-gold)" opacity="0.6"/>
+        </svg>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ FEATURED WORKS -->
+    <section class="works" id="works" aria-labelledby="works-heading">
+      <div class="works-inner">
+        <div class="works-header fade-in">
+          <span class="section-label">Featured Works</span>
+          <h2 id="works-heading" class="works-heading">A Body of Work<br/><em>Worth Savoring</em></h2>
+          <p class="works-subhead">Seven volumes. Countless transformations. One enduring voice.</p>
+        </div>
+
+        <!-- Asymmetric feature grid -->
+        <div class="works-grid">
+
+          <!-- Featured / Hero card (spans 2 cols) -->
+          <article class="work-card work-card--featured fade-in" aria-label="Featured portrait: Chef Brenda Smith">
+            <div class="work-card-visual work-card-visual--image work-card-visual--contain">
+              <img src="assets/brenda-portrait.jpg" alt="Portrait of Chef Brenda Smith" class="work-card-image work-card-image--featured work-card-image--contain" />
+            </div>
+            <div class="work-card-body">
+              <span class="work-card-tag">Signature Presence</span>
+              <h3 class="work-card-title">Chef Brenda Smith</h3>
+              <p class="work-card-desc">
+                The central image of the story: poised, modern, and unmistakably her. This portrait carries the authority, warmth, and elegance the site is built around.
+              </p>
+              <a href="#invitation" class="work-card-link" aria-label="Learn more about Chef Brenda Smith">Learn More →</a>
+            </div>
+          </article>
+
+          <!-- Secondary cards -->
+          <article class="work-card work-card--secondary fade-in" aria-label="Work: The Mushroom Method">
+            <div class="work-card-visual work-card-visual--sm work-card-visual--image work-card-visual--contain">
+              <img src="assets/mushroom-method.jpg" alt="The Mushroom Method cover featuring Chef Brenda Smith" class="work-card-image work-card-image--contain" />
+            </div>
+            <div class="work-card-body">
+              <span class="work-card-tag">Executive Selection</span>
+              <h3 class="work-card-title">The Mushroom Method</h3>
+              <p class="work-card-desc">A polished concept cover that places Chef Brenda at the center of culinary reinvention and refined wellness storytelling.</p>
+              <a href="#invitation" class="work-card-link" aria-label="Learn more about The Mushroom Method">Learn More →</a>
+            </div>
+          </article>
+
+          <article class="work-card work-card--secondary fade-in" aria-label="Work: Rhythm and Roux">
+            <div class="work-card-visual work-card-visual--sm work-card-visual--image work-card-visual--contain">
+              <img src="assets/rhythm-cover.jpg" alt="Rhythm and Roux cover featuring Chef Brenda Smith and Ron Smith" class="work-card-image work-card-image--contain" />
+            </div>
+            <div class="work-card-body">
+              <span class="work-card-tag">Brand Echo</span>
+              <h3 class="work-card-title">Rhythm & Roux</h3>
+              <p class="work-card-desc">The shared-cover image with Ronnie appears once as a supporting echo of the broader Rhythm & Roux story, while the page remains centered on Brenda.</p>
+              <a href="#invitation" class="work-card-link" aria-label="Learn more about Rhythm and Roux">Learn More →</a>
+            </div>
+          </article>
+
+          <article class="work-card work-card--tertiary fade-in" aria-label="Work: Speaking & Residencies">
+            <div class="work-card-body">
+              <span class="work-card-tag">Live Experience</span>
+              <h3 class="work-card-title">Speaking &<br/>Residencies</h3>
+              <p class="work-card-desc">Chef Brenda brings her philosophy to universities, cultural institutions, and intimate gatherings worldwide.</p>
+              <a href="#invitation" class="work-card-link" aria-label="Inquire about speaking and residencies">Inquire →</a>
+            </div>
+            <div class="work-card-accent" aria-hidden="true">
+              <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="60" cy="60" r="50" stroke="var(--accent-gold)" stroke-width="0.6" opacity="0.3"/>
+                <path d="M60 10 L65 40 L90 20 L72 44 L100 50 L72 56 L90 80 L65 60 L60 90 L55 60 L30 80 L48 56 L20 50 L48 44 L30 20 L55 40 Z" stroke="var(--accent-gold)" stroke-width="0.8" fill="none" opacity="0.4"/>
+                <circle cx="60" cy="60" r="8" fill="var(--accent-gold)" opacity="0.15"/>
+                <circle cx="60" cy="60" r="3" fill="var(--accent-gold)" opacity="0.5"/>
+              </svg>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ PHILOSOPHY / BRAND PILLARS -->
+    <section class="philosophy" id="philosophy" aria-labelledby="philosophy-heading">
+      <!-- Background gradient orb -->
+      <div class="philosophy-bg-orb" aria-hidden="true"></div>
+
+      <div class="philosophy-inner">
+        <div class="philosophy-header fade-in">
+          <span class="section-label">Culinary Philosophy</span>
+          <h2 id="philosophy-heading" class="philosophy-heading">
+            Three Pillars.<br/>
+            <em>One Covenant.</em>
+          </h2>
+        </div>
+
+        <div class="pillars-grid">
+
+          <div class="pillar fade-in">
+            <div class="pillar-icon" aria-hidden="true">
+              <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Flame / nourishment icon -->
+                <path d="M32 56 C20 56 12 46 12 36 C12 26 18 20 24 16 C22 24 28 26 28 20 C28 14 34 8 34 8 C34 8 52 20 52 36 C52 46 44 56 32 56Z" stroke="var(--accent-gold)" stroke-width="1.2" fill="none" opacity="0.8"/>
+                <path d="M32 48 C26 48 22 42 22 36 C22 32 25 28 28 26 C27 30 30 32 32 30 C34 28 36 24 36 24 C36 24 44 30 44 36 C44 42 38 48 32 48Z" stroke="var(--accent-champagne)" stroke-width="0.8" fill="none" opacity="0.5"/>
+                <circle cx="32" cy="38" r="3" fill="var(--accent-gold)" opacity="0.6"/>
+              </svg>
+            </div>
+            <h3 class="pillar-title">Radical Nourishment</h3>
+            <p class="pillar-text">
+              Food is not performance. It is care made tangible. Every dish Chef Brenda creates 
+              begins with a question: what does this body — this particular, irreplaceable body — 
+              truly need today?
+            </p>
+          </div>
+
+          <div class="pillar fade-in">
+            <div class="pillar-icon" aria-hidden="true">
+              <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Archive / memory icon -->
+                <rect x="12" y="20" width="40" height="32" rx="2" stroke="var(--accent-gold)" stroke-width="1.2" fill="none" opacity="0.7"/>
+                <path d="M20 20 L20 12 L44 12 L44 20" stroke="var(--accent-gold)" stroke-width="1.2" stroke-linecap="round" fill="none" opacity="0.5"/>
+                <path d="M20 34 L44 34" stroke="var(--accent-champagne)" stroke-width="0.8" opacity="0.5"/>
+                <path d="M20 40 L36 40" stroke="var(--accent-champagne)" stroke-width="0.8" opacity="0.4"/>
+                <circle cx="32" cy="12" r="3" fill="var(--accent-gold)" opacity="0.7"/>
+              </svg>
+            </div>
+            <h3 class="pillar-title">Cultural Archive</h3>
+            <p class="pillar-text">
+              Recipes are living documents — each one carrying the fingerprints of every hand 
+              that shaped it. Chef Brenda's work is an act of preservation: rescuing flavors 
+              from erasure, one dish at a time.
+            </p>
+          </div>
+
+          <div class="pillar fade-in">
+            <div class="pillar-icon" aria-hidden="true">
+              <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Wellness / bloom icon -->
+                <circle cx="32" cy="32" r="8" stroke="var(--accent-gold)" stroke-width="1.2" fill="none" opacity="0.8"/>
+                <path d="M32 10 C32 10 26 18 26 26 C26 34 32 34 32 34 C32 34 38 34 38 26 C38 18 32 10 32 10Z" stroke="var(--accent-gold)" stroke-width="1" fill="none" opacity="0.5"/>
+                <path d="M32 54 C32 54 26 46 26 38 C26 30 32 30 32 30 C32 30 38 30 38 38 C38 46 32 54 32 54Z" stroke="var(--accent-champagne)" stroke-width="1" fill="none" opacity="0.4"/>
+                <path d="M10 32 C10 32 18 26 26 26 C34 26 34 32 34 32 C34 32 34 38 26 38 C18 38 10 32 10 32Z" stroke="var(--accent-gold)" stroke-width="1" fill="none" opacity="0.5"/>
+                <path d="M54 32 C54 32 46 26 38 26 C30 26 30 32 30 32 C30 32 30 38 38 38 C46 38 54 32 54 32Z" stroke="var(--accent-champagne)" stroke-width="1" fill="none" opacity="0.4"/>
+              </svg>
+            </div>
+            <h3 class="pillar-title">Living Wellness</h3>
+            <p class="pillar-text">
+              Generations of Southern food wisdom carry healing intelligence that Western medicine 
+              is only beginning to validate. Chef Brenda bridges the ancestral and the scientific, 
+              building a cuisine for the whole self.
+            </p>
+          </div>
+
+        </div>
+
+        <!-- Asymmetric editorial callout -->
+        <div class="philosophy-callout fade-in">
+          <div class="callout-line" aria-hidden="true"></div>
+          <blockquote class="callout-text">
+            "The pot on the stove is a portal. Every person who has ever cooked in love 
+            lives inside it — and every person you feed with that love carries them forward."
+          </blockquote>
+          <cite class="callout-cite">Chef Brenda Smith · <em>Roux & Remedy</em>, Introduction</cite>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ INVITATION CTA -->
+    <section class="invitation" id="invitation" aria-labelledby="invitation-heading">
+      <canvas class="invitation-canvas" id="invitation-canvas" aria-hidden="true"></canvas>
+
+      <div class="invitation-inner">
+        <div class="invitation-ornament" aria-hidden="true">
+          <svg viewBox="0 0 200 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 20 L80 20" stroke="var(--accent-gold)" stroke-width="0.5" opacity="0.4"/>
+            <path d="M120 20 L200 20" stroke="var(--accent-gold)" stroke-width="0.5" opacity="0.4"/>
+            <circle cx="100" cy="20" r="6" fill="none" stroke="var(--accent-gold)" stroke-width="0.8" opacity="0.6"/>
+            <circle cx="100" cy="20" r="2" fill="var(--accent-gold)" opacity="0.8"/>
+            <circle cx="80" cy="20" r="2" fill="var(--accent-gold)" opacity="0.4"/>
+            <circle cx="120" cy="20" r="2" fill="var(--accent-gold)" opacity="0.4"/>
+          </svg>
+        </div>
+
+        <span class="section-label fade-in">The Invitation</span>
+        <h2 id="invitation-heading" class="invitation-heading fade-in">
+          Begin the<br/><em>Conversation</em>
+        </h2>
+        <p class="invitation-text fade-in">
+          Whether you seek a private culinary consultation, a speaking engagement, 
+          a wellness retreat collaboration, or simply wish to bring Chef Brenda's 
+          vision into your world — this is where the story begins.
+        </p>
+
+        <div class="invitation-options fade-in">
+          <a href="mailto:hello@rhythmandroux.com" class="invitation-option">
+            <span class="option-label">Private Consultation</span>
+            <span class="option-arrow">→</span>
+          </a>
+          <a href="mailto:bookings@rhythmandroux.com" class="invitation-option">
+            <span class="option-label">Speaking &amp; Events</span>
+            <span class="option-arrow">→</span>
+          </a>
+          <a href="mailto:media@rhythmandroux.com" class="invitation-option">
+            <span class="option-label">Media &amp; Press</span>
+            <span class="option-arrow">→</span>
+          </a>
+        </div>
+
+        <a href="mailto:hello@rhythmandroux.com" class="btn-gold fade-in">
+          Reserve Your Consultation
+        </a>
+
+        <p class="invitation-note fade-in">
+          Responses within 48 hours · New Orleans & worldwide
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════════════════════ FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <svg class="logo-svg logo-svg--sm" viewBox="0 0 120 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Rhythm and Roux logo" role="img">
+          <g>
+            <path d="M8 38 C8 38 12 18 22 14 C32 10 38 16 38 24 C38 30 34 34 28 35 L38 46" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            <path d="M28 35 C34 35 38 32 40 28" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.5"/>
+            <path d="M48 46 C48 46 50 38 54 32 C58 26 60 38 56 42 C52 46 48 44 48 40 C48 36 52 32 58 30 C64 28 68 32 68 36" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            <path d="M78 38 C78 38 82 18 92 14 C102 10 108 16 108 24 C108 30 104 34 98 35 L108 46" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            <path d="M98 35 C104 35 108 32 110 28" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.5"/>
+            <circle cx="60" cy="10" r="1.5" fill="var(--accent-gold)" opacity="0.9"/>
+          </g>
+        </svg>
+        <div>
+          <p class="footer-brand">Rhythm & Roux</p>
+          <p class="footer-tagline">Chef Brenda Smith · New Orleans</p>
+        </div>
+      </div>
+
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="#legacy">Legacy</a>
+        <a href="#works">Works</a>
+        <a href="#philosophy">Philosophy</a>
+        <a href="#invitation">Connect</a>
+      </nav>
+
+      <p class="footer-copy">
+        © 2026 Chef Brenda Smith / Rhythm & Roux. All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+<script data-pplx-inline-edit>
+(function(){
+  if(window===window.top)return;
+  function inlineAll(orig,clone){
+    if(orig.nodeType!==1)return;
+    try{
+      var cs=getComputedStyle(orig);
+      var t='';
+      for(var i=0;i<cs.length;i++){t+=cs[i]+':'+cs.getPropertyValue(cs[i])+';';}
+      clone.style.cssText=t;
+    }catch(e){}
+    var oc=orig.children,cc=clone.children;
+    for(var j=0;j<oc.length&&j<cc.length;j++){inlineAll(oc[j],cc[j]);}
+  }
+  function stripExternal(clone){
+    var imgs=clone.querySelectorAll('img');
+    for(var i=0;i<imgs.length;i++){
+      var s=imgs[i].getAttribute('src');
+      if(s&&!s.startsWith('data:'))imgs[i].removeAttribute('src');
+    }
+    var all=clone.querySelectorAll('*');
+    for(var i=0;i<all.length;i++){
+      var st=all[i].style.cssText;
+      if(st&&st.indexOf('url(')>=0){
+        all[i].style.cssText=st.replace(/url\(["']?(?!data:)[^)"']*["']?\)/gi,'none');
+      }
+    }
+  }
+  window.addEventListener('message',function(e){
+    if(!e.data||e.data.type!=='INLINE_EDIT_CAPTURE_REQUEST')return;
+    var scrollX=window.scrollX||window.pageXOffset||0;
+    var scrollY=window.scrollY||window.pageYOffset||0;
+    var w=window.innerWidth,h=window.innerHeight;
+    try{
+      var clone=document.documentElement.cloneNode(true);
+      var rm=clone.querySelectorAll('script,link[rel="stylesheet"],style');
+      for(var i=0;i<rm.length;i++){rm[i].remove();}
+      inlineAll(document.documentElement,clone);
+      stripExternal(clone);
+      var html=new XMLSerializer().serializeToString(clone);
+      var svg='<svg xmlns="http://www.w3.org/2000/svg" width="'+w+'" height="'+h+'">'
+        +'<foreignObject width="100%" height="100%">'
+        +'<div xmlns="http://www.w3.org/1999/xhtml" style="width:'+w+'px;height:'+h+'px;overflow:hidden">'
+        +'<div style="transform:translate(-'+scrollX+'px,-'+scrollY+'px);transform-origin:top left">'
+        +html+'</div></div></foreignObject></svg>';
+      var svgUrl='data:image/svg+xml;charset=utf-8,'+encodeURIComponent(svg);
+      var img=new Image();
+      img.onload=function(){
+        var c=document.createElement('canvas');c.width=w;c.height=h;
+        c.getContext('2d').drawImage(img,0,0);
+        window.parent.postMessage({type:'INLINE_EDIT_SCREENSHOT_RESULT',dataUrl:c.toDataURL('image/png'),scrollX:scrollX,scrollY:scrollY},'*');
+      };
+      img.onerror=function(){
+        window.parent.postMessage({type:'INLINE_EDIT_SCREENSHOT_RESULT',dataUrl:null,scrollX:scrollX,scrollY:scrollY},'*');
+      };
+      img.src=svgUrl;
+    }catch(err){
+      window.parent.postMessage({type:'INLINE_EDIT_SCREENSHOT_RESULT',dataUrl:null,scrollX:scrollX,scrollY:scrollY},'*');
+    }
+  });
+})();
+</script></body>
 </html>
